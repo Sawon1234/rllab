@@ -27,6 +27,8 @@ if __name__ == "__main__":
         env = data['env']
         while True:
             path = rollout(env, policy, max_path_length=args.max_path_length,
-                           animated=True, speedup=args.speedup)
+                           animated=False, speedup=args.speedup)
             if not query_yes_no('Continue simulation?'):
                 break
+
+    import IPython; IPython.embed()
